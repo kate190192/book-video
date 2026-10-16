@@ -1,0 +1,14 @@
+{
+  "project_id": "BV-YYYYMMDD-001",
+  "language": "zh-CN",
+  "scenes": [
+    {
+      "scene_id": "S01",
+      "narration": "Replace with approved narration.",
+      "visual_intent": "Describe a relevant visual supporting this exact narration.",
+      "on_screen_text": [],
+      "source_ids": [],
+      "estimated_seconds": 10
+    }
+  ]
+}
