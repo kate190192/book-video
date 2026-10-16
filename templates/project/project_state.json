@@ -1,0 +1,20 @@
+{
+  "project_id": "BV-YYYYMMDD-001",
+  "status": "DISCOVER",
+  "created_at": null,
+  "updated_at": null,
+  "book_id": null,
+  "current_stage": "DISCOVER",
+  "completed_stages": [],
+  "artifacts": [],
+  "gate_results": {},
+  "retry_counts": {},
+  "blockers": [],
+  "publish": {
+    "video_id": null,
+    "visibility": "private",
+    "approval_record_path": null,
+    "public_release_authorized": false
+  },
+  "next_action": "Run book discovery and verify candidates."
+}
