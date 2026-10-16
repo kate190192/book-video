@@ -1,0 +1,1 @@
+decision_id,book_id,decision_date,decision_type,score_knowledge,score_evidence,score_originality,score_long_term,score_video_potential,score_source_availability,score_audience_fit,total_score,hard_gate_result,decision,status_after_decision,reason,reviewer,source_refs
