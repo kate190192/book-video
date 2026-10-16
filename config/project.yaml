@@ -1,0 +1,62 @@
+project:
+  name: "BookVideo Agent Workflow"
+  language: "zh-CN"
+  target_platform: "YouTube"
+  default_video_minutes: 8
+  acceptable_video_minutes:
+    min: 5
+    max: 15
+  narration_chars_per_minute:
+    min: 280
+    max: 320
+  weekly_book_discovery_target: 20
+  script_review_min_score: 85
+  video_qa_min_score: 90
+  max_retries_per_stage: 2
+
+channel:
+  audience: "对心理学、社会学、哲学、经济学、历史、科学与技术议题感兴趣的成年观众"
+  positioning: "以书籍为入口，解释一个重要问题或机制；重视证据、论证和现实解释力"
+  excluded_content:
+    - "无证据支撑的成功学结论"
+    - "只罗列金句或逐章复述"
+    - "标题与内容不符的夸张承诺"
+  category_weights:
+    psychology_cognitive_science: 1.0
+    sociology_anthropology: 1.0
+    philosophy_intellectual_history: 1.0
+    economics_behavioral_economics: 1.0
+    history_civilization: 0.9
+    science_evolution: 0.9
+    technology_future_society: 1.0
+
+production:
+  engine: "MoneyPrinterTurbo"
+  enabled: false
+  note: "启用前必须验证本机实际版本和调用接口；不得猜测 CLI/API 参数。"
+  output_dir: "artifacts"
+  aspect_ratio: "16:9"
+  resolution: "1920x1080"
+  subtitles: true
+
+publishing:
+  enabled: false
+  initial_visibility: "private"
+  require_human_approval_for_public: true
+  never_publish_without_approval_record: true
+
+storage:
+  books_csv: "data/books.csv"
+  video_projects_csv: "data/video_projects.csv"
+  book_decisions_csv: "data/book_decisions.csv"
+  projects_dir: "projects"
+  templates_dir: "templates/project"
+
+quality:
+  book_score_priority: 90
+  book_score_recommended: 80
+  book_score_watchlist: 70
+  topic_score_research: 75
+  topic_score_revise: 65
+  script_score_pass: 85
+  video_qa_score_pass: 90
