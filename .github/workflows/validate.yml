@@ -1,0 +1,25 @@
+name: Validate BookVideo workflow
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile workflow scripts
+        run: python -m py_compile scripts/*.py
+      - name: Validate ledgers
+        run: python scripts/validate_project.py --ledgers-only
+      - name: Create smoke-test project
+        run: python scripts/new_project.py --id BV-CI-TEST-001 --title "CI smoke test"
+      - name: Validate generated project
+        run: python scripts/validate_project.py --project BV-CI-TEST-001
