@@ -1,0 +1,17 @@
+{
+  "project_id": "BV-YYYYMMDD-001",
+  "status": "NOT_STARTED",
+  "tool": "MoneyPrinterTurbo",
+  "tool_version": null,
+  "interface_verified": false,
+  "input_files": [],
+  "output_files": [],
+  "command_or_method": null,
+  "started_at": null,
+  "finished_at": null,
+  "exit_status": null,
+  "log_path": null,
+  "retry_count": 0,
+  "errors": [],
+  "notes": "Record only observed facts. Do not invent tool flags or output paths."
+}
